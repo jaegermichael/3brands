@@ -1,5 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import consultingLogo from "../assets/creative-consulting-logo.jpg";
+import darrylLogo from "../assets/darryl-interiors-logo.jpg";
 import muvhenekiLogo from "../assets/muvheneki-logo.jpg";
 
 const links = [
@@ -17,15 +19,21 @@ export default function Navbar() {
       <nav className="mx-auto max-w-7xl rounded-[1.75rem] border border-ivory/55 bg-ivory/75 shadow-[0_16px_48px_rgba(39,35,31,0.12)] backdrop-blur-xl">
         <div className="flex min-h-[4.5rem] items-center justify-between gap-5 px-5 sm:px-7">
           <a href="#home" className="flex min-w-0 items-center gap-3 text-charcoal">
-            <img
-              src={muvhenekiLogo}
-              alt="Muvheneki logo"
-              className="h-11 w-11 shrink-0 rounded-full bg-ivory object-contain p-1.5 shadow-sm"
-            />
+            <span className="flex shrink-0 -space-x-2">
+              {[muvhenekiLogo, darrylLogo, consultingLogo].map((logo, index) => (
+                <img
+                  key={logo}
+                  src={logo}
+                  alt=""
+                  className="h-9 w-9 rounded-full border border-ivory bg-ivory object-contain p-1 shadow-sm"
+                  style={{ zIndex: 3 - index }}
+                />
+              ))}
+            </span>
             <span className="min-w-0">
-              <span className="block truncate font-display text-2xl font-semibold leading-none">Muvheneki</span>
+              <span className="block truncate font-display text-2xl font-semibold leading-none">The Briarcliff Group</span>
               <span className="mt-1 hidden font-sans text-xs font-semibold uppercase tracking-[0.2em] text-clay sm:block">
-                Briarcliff Group
+                Interiors / Words / Strategy
               </span>
             </span>
           </a>

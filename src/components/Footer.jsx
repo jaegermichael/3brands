@@ -24,7 +24,7 @@ export default function Footer() {
           </div>
         </div>
         <div>
-          <p className="text-sm font-semibold text-gold">Products</p>
+          <p className="text-sm font-semibold text-gold">Brands</p>
           <div className="mt-4 grid gap-3 text-sm text-ivory/70">
             <span>Muvheneki</span>
             <span>Darryl Interiors</span>

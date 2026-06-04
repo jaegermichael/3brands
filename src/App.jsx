@@ -9,7 +9,21 @@ import Navbar from "./components/Navbar";
 import Portfolio from "./components/Portfolio";
 import Services from "./components/Services";
 import WhyUs from "./components/WhyUs";
-import { ArrowRight, BriefcaseBusiness, Home, Layers3, Sparkles } from "lucide-react";
+import {
+  ArrowRight,
+  BriefcaseBusiness,
+  CalendarCheck,
+  ClipboardList,
+  Gem,
+  HandHeart,
+  Home,
+  Layers3,
+  Palette,
+  PenLine,
+  Quote,
+  Ruler,
+  Sparkles,
+} from "lucide-react";
 import { useEffect, useState } from "react";
 import consultingLogo from "./assets/creative-consulting-logo.jpg";
 import consultingPortrait from "./assets/darryl-city-portrait.jpg";
@@ -177,11 +191,82 @@ function MuvhenekiPage() {
       <Hero />
       <Intro />
       <BrandCards />
+      <MuvhenekiDepthSections />
       <About />
       <WhyUs />
       <CTA />
       <ContactForm />
     </>
+  );
+}
+
+function MuvhenekiDepthSections() {
+  const offerings = [
+    {
+      title: "Soul Sessions",
+      description: "Reflective one-on-one spaces for self-love, restoration, personal truth, and gentle rebirth.",
+      Icon: HandHeart,
+    },
+    {
+      title: "Poetry & Written Messages",
+      description: "Words created to name what the heart is carrying and offer language for healing.",
+      Icon: PenLine,
+    },
+    {
+      title: "Daily Divinations",
+      description: "Short intuitive messages and card pulls for grounding, clarity, and emotional direction.",
+      Icon: Sparkles,
+    },
+    {
+      title: "Monthly Message",
+      description: "A longer seasonal reflection to guide the month with tenderness, intention, and courage.",
+      Icon: CalendarCheck,
+    },
+  ];
+
+  const ritualSteps = [
+    "Choose a deck, message, or session that matches the season you are in.",
+    "Sit with the words slowly through journaling, meditation, prayer, or quiet reflection.",
+    "Return to the affirmation as a daily reminder until it becomes part of your inner language.",
+  ];
+
+  return (
+    <section className="bg-linen/45 py-20 sm:py-28">
+      <div className="section-shell">
+        <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
+          <div>
+            <p className="eyebrow">Muvheneki Practice</p>
+            <h2 className="section-title mt-5">A sanctuary for words, ritual, and return.</h2>
+          </div>
+          <p className="body-copy">
+            Muvheneki is not only a product line. It is a reflective practice built around healing
+            language, affirmation, meditation, and guided self-connection.
+          </p>
+        </div>
+
+        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          {offerings.map(({ title, description, Icon }) => (
+            <article key={title} className="rounded-[1.75rem] border border-taupe/20 bg-ivory/75 p-6 shadow-soft">
+              <Icon size={25} strokeWidth={1.4} className="text-clay" />
+              <h3 className="mt-8 font-display text-3xl font-medium leading-none">{title}</h3>
+              <p className="mt-4 leading-7 text-charcoal/68">{description}</p>
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-10 rounded-[2rem] bg-charcoal p-7 text-ivory shadow-glow sm:p-10">
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gold">How It Works</p>
+          <div className="mt-7 grid gap-5 lg:grid-cols-3">
+            {ritualSteps.map((step, index) => (
+              <div key={step} className="rounded-3xl border border-ivory/12 bg-ivory/[0.07] p-6">
+                <span className="font-display text-5xl text-gold/70">0{index + 1}</span>
+                <p className="mt-5 leading-7 text-ivory/72">{step}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -191,6 +276,18 @@ function DarrylPage() {
     ["Organic Bedroom Direction", darrylProjectTwo],
     ["Warm Dining Reference", darrylProjectThree],
     ["Exterior Arrival Mood", darrylProjectFour],
+  ];
+  const services = [
+    ["Interior Styling", "Layering furniture, decor, lighting, and objects into warm lived-in spaces."],
+    ["Exterior Direction", "Creating considered outdoor transitions, arrival moments, and atmosphere."],
+    ["Space Transformation", "Refreshing rooms or full environments with intention, comfort, and flow."],
+    ["Furniture & Decor Selection", "Choosing pieces that honour longevity, craft, and everyday use."],
+  ];
+  const process = [
+    "Discovery and spatial intention",
+    "Mood, material, and furniture direction",
+    "Styling, sourcing, and transformation plan",
+    "Refinement for warmth, purpose, and longevity",
   ];
 
   return (
@@ -213,6 +310,45 @@ function DarrylPage() {
             <a href="#darryl-contact" className="button-primary mt-8">Book a consult</a>
           </div>
           <img src={darrylPortrait} alt="Darryl Interiors portrait" className="aspect-[4/5] w-full rounded-[2rem] object-cover shadow-glow" />
+        </div>
+
+        <div className="mt-16 grid gap-10 lg:grid-cols-[0.75fr_1.25fr]">
+          <div>
+            <p className="eyebrow">Services</p>
+            <h2 className="section-title mt-5">Organic spaces with soul and structure.</h2>
+            <p className="body-copy mt-6">
+              Darryl Interiors works across homes, guesthouses, offices, exterior moments, and intimate
+              environments where beauty must also feel usable and alive.
+            </p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {services.map(([title, description]) => (
+              <article key={title} className="rounded-[1.5rem] border border-taupe/20 bg-ivory/75 p-6 shadow-soft">
+                <Ruler size={24} strokeWidth={1.4} className="text-clay" />
+                <h3 className="mt-7 text-lg font-semibold">{title}</h3>
+                <p className="mt-3 leading-7 text-charcoal/66">{description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-16 rounded-[2rem] bg-linen/55 p-7 shadow-soft sm:p-10">
+          <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+            <div>
+              <p className="eyebrow">Design Approach</p>
+              <h2 className="mt-5 font-display text-4xl font-medium leading-none sm:text-5xl">
+                Warmth, craft, connection, and time.
+              </h2>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {process.map((item, index) => (
+                <div key={item} className="rounded-3xl bg-ivory/80 p-5">
+                  <span className="font-display text-4xl text-gold/75">0{index + 1}</span>
+                  <p className="mt-4 text-sm font-semibold leading-6">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="mt-16">
@@ -246,6 +382,18 @@ function DarrylPage() {
 
 function CreativePage() {
   const industries = ["Music", "Aviation", "Lifestyle", "Banking", "Marketing", "Project management"];
+  const capabilities = [
+    ["Brand Direction", "Clarifying the creative position, tone, offer, and visual direction."],
+    ["Creative Strategy", "Turning ideas into structured campaigns, concepts, and project roadmaps."],
+    ["Marketing Execution", "Helping brands move from intention to market-facing action."],
+    ["Project Consulting", "Keeping timelines, collaborators, and deliverables aligned from concept to completion."],
+  ];
+  const delivery = [
+    "Understand the brand or project context",
+    "Define the creative and strategic direction",
+    "Build the execution plan and visual concept",
+    "Guide delivery, refinement, and growth",
+  ];
 
   return (
     <section className="pt-32">
@@ -264,6 +412,45 @@ function CreativePage() {
             <a href="#creative-contact" className="button-primary mt-8">Book a consult</a>
           </div>
           <img src={consultingPortrait} alt="Creative Consulting portrait" className="aspect-[4/5] w-full rounded-[2rem] object-cover shadow-glow" />
+        </div>
+
+        <div className="mt-16 grid gap-10 lg:grid-cols-[0.75fr_1.25fr]">
+          <div>
+            <p className="eyebrow">Capabilities</p>
+            <h2 className="section-title mt-5">From loose idea to purposeful delivery.</h2>
+            <p className="body-copy mt-6">
+              Creative Consulting Inc. supports projects that need both imagination and operational
+              discipline: the concept, the plan, the people, and the finish line.
+            </p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {capabilities.map(([title, description]) => (
+              <article key={title} className="rounded-[1.5rem] border border-taupe/20 bg-ivory/75 p-6 shadow-soft">
+                <ClipboardList size={24} strokeWidth={1.4} className="text-clay" />
+                <h3 className="mt-7 text-lg font-semibold">{title}</h3>
+                <p className="mt-3 leading-7 text-charcoal/66">{description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-16 rounded-[2rem] bg-linen/55 p-7 shadow-soft sm:p-10">
+          <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+            <div>
+              <p className="eyebrow">Consulting Process</p>
+              <h2 className="mt-5 font-display text-4xl font-medium leading-none sm:text-5xl">
+                Strategic enough to move, creative enough to matter.
+              </h2>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {delivery.map((item, index) => (
+                <div key={item} className="rounded-3xl bg-ivory/80 p-5">
+                  <span className="font-display text-4xl text-gold/75">0{index + 1}</span>
+                  <p className="mt-4 text-sm font-semibold leading-6">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="mt-16">
