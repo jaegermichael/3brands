@@ -1,16 +1,18 @@
-// Replace project placeholders with final brand photography as portfolio work is approved.
 import creativeImage from "../assets/creative-direction.jpg";
-import heroImage from "../assets/hero-creative-house.jpg";
-import lifestyleImage from "../assets/heritage-lifestyle.jpg";
+import lifestyleImage from "../assets/muvheneki-mug.jpg";
+import projectOne from "../assets/darryl-project-1.jpg";
+import projectTwo from "../assets/darryl-project-2.jpg";
+import projectThree from "../assets/darryl-project-3.jpg";
+import projectFour from "../assets/darryl-project-4.jpg";
 import Reveal from "./Reveal";
 
 const projects = [
-  { title: "Warm Minimalist Lounge", category: "Interiors", image: heroImage, className: "md:row-span-2" },
-  { title: "Heritage Candle Collection", category: "Decor", image: lifestyleImage, className: "" },
-  { title: "Modern Office Refresh", category: "Interiors", image: heroImage, className: "" },
-  { title: "Styled Creative Event", category: "Events & Styling", image: creativeImage, className: "md:row-span-2" },
-  { title: "Earth-Tone Living Space", category: "Interiors", image: heroImage, className: "" },
-  { title: "Brand Mood Direction", category: "Creative Projects", image: creativeImage, className: "" },
+  { title: "How to Use an Affirmation Deck", category: "Blog Post", image: creativeImage, className: "md:row-span-2" },
+  { title: "A Note on Ndakakosha", category: "Monthly Message", image: lifestyleImage, className: "" },
+  { title: "Guesthouse Mood Reference", category: "Darryl Interiors", image: projectOne, className: "" },
+  { title: "Organic Bedroom Direction", category: "Previous Projects", image: projectTwo, className: "md:row-span-2" },
+  { title: "Warm Dining Reference", category: "Darryl Interiors", image: projectThree, className: "" },
+  { title: "Exterior Arrival Mood", category: "Previous Projects", image: projectFour, className: "" },
 ];
 
 export default function Portfolio() {
@@ -19,11 +21,11 @@ export default function Portfolio() {
       <div className="section-shell">
         <Reveal className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="eyebrow">Projects</p>
-            <h2 className="section-title mt-5">Warm, meaningful work in many forms.</h2>
+            <p className="eyebrow">Blog, Projects & Partners</p>
+            <h2 className="section-title mt-5">Messages, previous projects, and creative direction references.</h2>
           </div>
           <div className="flex flex-wrap gap-2 text-sm text-charcoal/70">
-            {["Interiors", "Decor", "Events & Styling", "Creative Projects"].map((category) => (
+            {["Daily Divinations", "Monthly Message", "Previous Projects", "Previous Partners"].map((category) => (
               <span key={category} className="rounded-full border border-taupe/25 bg-ivory/60 px-4 py-2">
                 {category}
               </span>

@@ -2,12 +2,12 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const links = [
-  ["Home", "#home"],
-  ["Our Brands", "#brands"],
-  ["Services", "#services"],
-  ["Projects", "#projects"],
-  ["About", "#about"],
-  ["Contact", "#contact"],
+  ["Affirmation", "#affirmation"],
+  ["Products", "#brands"],
+  ["Group", "#services"],
+  ["Blog", "#projects"],
+  ["Meditations", "#about"],
+  ["Connect", "#contact"],
 ];
 
 export default function Navbar() {
@@ -17,9 +17,12 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5">
       <nav className="mx-auto max-w-7xl rounded-[1.75rem] border border-ivory/55 bg-ivory/75 shadow-[0_16px_48px_rgba(39,35,31,0.12)] backdrop-blur-xl">
         <div className="flex min-h-[4.5rem] items-center justify-between gap-5 px-5 sm:px-7">
-          {/* Replace this text mark with the final Darryl Creative House logo asset when available. */}
+          {/* Replace this text mark with the final Muvheneki logo asset when available. */}
           <a href="#home" className="min-w-0 font-display text-2xl font-semibold leading-none text-charcoal">
-            Darryl Creative House
+            Muvheneki
+            <span className="ml-2 hidden font-sans text-xs font-semibold uppercase tracking-[0.2em] text-clay sm:inline">
+              Briarcliff Group
+            </span>
           </a>
 
           <div className="hidden items-center gap-7 lg:flex">

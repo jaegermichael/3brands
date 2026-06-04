@@ -1,20 +1,36 @@
 import Reveal from "./Reveal";
 
+import consultingLogo from "../assets/creative-consulting-logo.jpg";
+import darrylLogo from "../assets/darryl-interiors-logo.jpg";
+import muvhenekiLogo from "../assets/muvheneki-logo.jpg";
+import darrylPortrait from "../assets/darryl-portrait.jpg";
+import consultingImage from "../assets/darryl-city-portrait.jpg";
+import muvhenekiImage from "../assets/muvheneki-portrait.jpg";
+
 const services = [
   {
-    title: "Interior & Space Design",
-    description: "Spaces shaped for comfort, function, and a lasting sense of home.",
-    items: ["Home styling", "Office styling", "Room makeovers", "Furniture and decor selection", "Space planning"],
+    title: "Darryl Interiors",
+    description:
+      "Dedicated to the art of spatial alchemy, transforming interior and exterior environments into spaces of beauty, purpose, and connection.",
+    items: ["Organic natural design", "Interior and exterior spaces", "Refinement and craftsmanship", "Previous projects", "Book a consult"],
+    logo: darrylLogo,
+    image: darrylPortrait,
   },
   {
-    title: "Decor & Lifestyle Products",
-    description: "Objects with warmth and meaning for living, gifting, and gathering.",
-    items: ["Candles", "Cultural decor", "Handmade lifestyle pieces", "Gift collections", "Custom decor pieces"],
+    title: "Muvheneki",
+    description:
+      "A sanctuary of words that heal, offering poetry, soul sessions, affirmations, and meditations for self-love, renewal, and rebirth.",
+    items: ["Daily divinations", "Monthly message", "Soul sessions", "Affirmations", "Meditations"],
+    logo: muvhenekiLogo,
+    image: muvhenekiImage,
   },
   {
-    title: "Creative Consulting",
-    description: "Direction for brands, events, projects, and visual experiences.",
-    items: ["Brand styling", "Creative direction", "Event styling", "Visual concepts", "Project planning"],
+    title: "Creative Consulting Inc.",
+    description:
+      "Working at the intersection of strategy, creativity, and execution across music, aviation, lifestyle, banking, and more.",
+    items: ["Marketing strategy", "Project management", "Concept to completion", "Previous partners", "Book a consult"],
+    logo: consultingLogo,
+    image: consultingImage,
   },
 ];
 
@@ -24,19 +40,23 @@ export default function Services() {
       <div className="section-shell">
         <Reveal className="grid gap-5 border-b border-taupe/25 pb-9 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
           <div>
-            <p className="eyebrow">Services</p>
-            <h2 className="section-title mt-5">Built across three creative disciplines.</h2>
+            <p className="eyebrow">The Briarcliff Group</p>
+            <h2 className="section-title mt-5">Three connected practices, one creative foundation.</h2>
           </div>
           <p className="body-copy max-w-2xl lg:justify-self-end">
-            Visitors can enter through interiors, curated lifestyle pieces, or consulting, then stay with a
-            creative house that understands the full experience.
+            The group brings together interiors, words that heal, and creative strategy. Each brand has
+            its own language, but all three are rooted in refinement, intention, and transformation.
           </p>
         </Reveal>
 
         <div className="mt-10 grid gap-5 lg:grid-cols-3">
-          {services.map(({ title, description, items }, index) => (
+          {services.map(({ title, description, items, logo, image }, index) => (
             <Reveal key={title} className="rounded-[1.75rem] border border-taupe/20 bg-ivory/70 p-6 shadow-soft sm:p-8">
-              <span className="font-display text-5xl text-gold/70">0{index + 1}</span>
+              <div className="flex items-center justify-between gap-4">
+                <span className="font-display text-5xl text-gold/70">0{index + 1}</span>
+                <img src={logo} alt={`${title} logo`} className="h-16 w-16 rounded-full bg-ivory object-contain p-2" />
+              </div>
+              <img src={image} alt="" className="mt-6 aspect-[4/3] w-full rounded-3xl object-cover" />
               <h3 className="mt-6 font-display text-3xl font-medium leading-none">{title}</h3>
               <p className="mt-4 min-h-20 leading-7 text-charcoal/70">{description}</p>
               <ul className="mt-7 grid gap-3 border-t border-taupe/20 pt-6 text-sm font-medium text-charcoal/80">

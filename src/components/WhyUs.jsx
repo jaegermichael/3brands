@@ -1,11 +1,14 @@
-import { Compass, Gem, HandHeart, Layers3 } from "lucide-react";
+import { Mail, MessageCircle, Phone, Quote, Send, Star } from "lucide-react";
 import Reveal from "./Reveal";
 
 const reasons = [
-  { title: "One connected creative vision", Icon: Layers3 },
-  { title: "Premium design approach", Icon: Gem },
-  { title: "Culturally inspired details", Icon: HandHeart },
-  { title: "Practical, beautiful solutions", Icon: Compass },
+  { title: "Daily divinations", detail: "Fresh reflective guidance", Icon: Star },
+  { title: "Monthly message", detail: "Seasonal words and ritual notes", Icon: Quote },
+  { title: "Instagram", detail: "@Muvheneki / @Darrylinteriors / @creativeconsulting.inc", Icon: Send },
+  { title: "Twitter", detail: "Add the final handle here", Icon: MessageCircle },
+  { title: "Email address", detail: "hello@muvheneki.com placeholder", Icon: Mail },
+  { title: "Contact number", detail: "+000 000 000 placeholder", Icon: Phone },
+  { title: "Testimonials", detail: "Space for client love and reflections", Icon: Quote },
 ];
 
 export default function WhyUs() {
@@ -15,18 +18,20 @@ export default function WhyUs() {
         <Reveal className="rounded-[2rem] border border-taupe/20 bg-paper-wash px-6 py-8 shadow-soft sm:px-8 lg:px-10">
           <div className="grid gap-8 border-b border-taupe/20 pb-8 lg:grid-cols-[0.72fr_1fr] lg:items-end">
             <div>
-              <p className="eyebrow">Why Work With Us</p>
-              <h2 className="mt-5 font-display text-4xl font-medium leading-none sm:text-5xl">A house with range and restraint.</h2>
+              <p className="eyebrow">Connect With Muvheneki</p>
+              <h2 className="mt-5 font-display text-4xl font-medium leading-none sm:text-5xl">Follow the messages where they find you.</h2>
             </div>
             <p className="body-copy">
-              Every service is grounded in an eye for atmosphere, cultural meaning, and real-world use.
+              Receive daily and monthly reflections, ask about products, or send a note when you want to
+              book a reading, message, or meditation.
             </p>
           </div>
           <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {reasons.map(({ title, Icon }) => (
+            {reasons.map(({ title, detail, Icon }) => (
               <article key={title} className="rounded-3xl border border-ivory/90 bg-ivory/70 p-5">
                 <Icon size={24} strokeWidth={1.4} className="text-clay" />
                 <h3 className="mt-8 text-base font-semibold leading-6">{title}</h3>
+                <p className="mt-2 text-sm leading-6 text-charcoal/60">{detail}</p>
               </article>
             ))}
           </div>

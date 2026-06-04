@@ -1,5 +1,4 @@
-// Replace this placeholder with a founder, studio, or project image for the final About section.
-import creativeImage from "../assets/creative-direction.jpg";
+import creativeImage from "../assets/muvheneki-portrait.jpg";
 import Reveal from "./Reveal";
 
 export default function About() {
@@ -14,17 +13,16 @@ export default function About() {
         </Reveal>
 
         <Reveal>
-          <p className="eyebrow">About</p>
+          <p className="eyebrow">Soul Sessions & Meditations</p>
           <div className="gold-rule my-6" />
-          <h2 className="section-title">Design that moves from atmosphere to direction.</h2>
+          <h2 className="section-title">Words that heal, held with intention.</h2>
           <p className="body-copy mt-7">
-            At Darryl Creative House, design is not treated as decoration only. It is a way to shape how
-            people feel, move, gather, and experience a space. Through Darryl Interiors, Muvheneki, and
-            Creative Consulting, the group offers a complete creative approach, from interiors and decor
-            to strategy and visual storytelling.
+            Muvheneki meditations are created for grounding, softness, self-worth, and moments when the
+            heart needs a steadier sentence. Pair them with an affirmation deck pull, a journal entry,
+            or a warm drink in your favorite mug.
           </p>
           <blockquote className="mt-9 border-l border-gold pl-6 font-display text-3xl leading-tight text-umber sm:text-4xl">
-            Design should feel beautiful, intentional, and deeply personal.
+            I am loved. I am important. I am allowed to begin again.
           </blockquote>
         </Reveal>
       </div>

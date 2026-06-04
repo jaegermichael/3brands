@@ -1,9 +1,10 @@
 const quickLinks = [
-  ["Our Brands", "#brands"],
-  ["Services", "#services"],
-  ["Projects", "#projects"],
-  ["About", "#about"],
-  ["Contact", "#contact"],
+  ["Affirmation", "#affirmation"],
+  ["Products", "#brands"],
+  ["Group", "#services"],
+  ["Blog", "#projects"],
+  ["Meditations", "#about"],
+  ["Connect", "#contact"],
 ];
 
 export default function Footer() {
@@ -11,8 +12,8 @@ export default function Footer() {
     <footer className="bg-charcoal py-14 text-ivory">
       <div className="section-shell grid gap-10 border-b border-ivory/12 pb-10 md:grid-cols-2 lg:grid-cols-[1.2fr_0.7fr_0.7fr_0.9fr]">
         <div>
-          <p className="font-display text-4xl font-medium">Darryl Creative House</p>
-          <p className="mt-4 text-sm uppercase tracking-[0.25em] text-gold">Interiors. Heritage. Creative Direction.</p>
+          <p className="font-display text-4xl font-medium">The Briarcliff Group</p>
+          <p className="mt-4 text-sm uppercase tracking-[0.25em] text-gold">Interiors. Words that heal. Creative strategy.</p>
         </div>
         <div>
           <p className="text-sm font-semibold text-gold">Quick links</p>
@@ -25,24 +26,24 @@ export default function Footer() {
           </div>
         </div>
         <div>
-          <p className="text-sm font-semibold text-gold">Brands</p>
+          <p className="text-sm font-semibold text-gold">Products</p>
           <div className="mt-4 grid gap-3 text-sm text-ivory/70">
-            <span>Darryl Interiors</span>
             <span>Muvheneki</span>
-            <span>Creative Consulting</span>
+            <span>Darryl Interiors</span>
+            <span>Creative Consulting Inc.</span>
           </div>
         </div>
         <div>
           <p className="text-sm font-semibold text-gold">Contact</p>
           <div className="mt-4 grid gap-3 text-sm text-ivory/70">
-            <span>hello@yourstudio.com</span>
+            <span>hello@muvheneki.com</span>
             <span>+000 000 000</span>
-            <span>Instagram / Pinterest</span>
+            <span>@Muvheneki / @Darrylinteriors / @creativeconsulting.inc</span>
           </div>
         </div>
       </div>
       <div className="section-shell pt-6 text-sm text-ivory/50">
-        <p>Creative lifestyle group for spaces, objects, and visual direction.</p>
+        <p>Muvheneki catalogue available as a site download. Final email and contact number can be swapped in when ready.</p>
       </div>
     </footer>
   );
