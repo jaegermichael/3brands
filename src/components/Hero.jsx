@@ -1,7 +1,6 @@
 import { ArrowRight } from "lucide-react";
 // Replace this placeholder with final Muvheneki product/lifestyle photography.
 import heroImage from "../assets/muvheneki-ritual-close.jpg";
-import muvhenekiLogo from "../assets/muvheneki-logo.jpg";
 
 export default function Hero() {
   return (
@@ -16,11 +15,6 @@ export default function Hero() {
 
       <div className="section-shell relative flex min-h-[min(94svh,62rem)] items-center pb-24 pt-40 sm:pb-32">
         <div className="max-w-3xl animate-[fade-in_900ms_ease_both]">
-          <img
-            src={muvhenekiLogo}
-            alt="Muvheneki logo"
-            className="mb-6 h-20 w-20 rounded-full bg-ivory/90 object-contain p-3 shadow-soft sm:h-24 sm:w-24"
-          />
           <p className="mb-6 inline-flex rounded-full border border-ivory/25 bg-ivory/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-ivory backdrop-blur">
             The Briarcliff Group / Words that heal
           </p>

@@ -1,5 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import muvhenekiLogo from "../assets/muvheneki-logo.jpg";
 
 const links = [
   ["Affirmation", "#affirmation"],
@@ -17,11 +18,17 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5">
       <nav className="mx-auto max-w-7xl rounded-[1.75rem] border border-ivory/55 bg-ivory/75 shadow-[0_16px_48px_rgba(39,35,31,0.12)] backdrop-blur-xl">
         <div className="flex min-h-[4.5rem] items-center justify-between gap-5 px-5 sm:px-7">
-          {/* Replace this text mark with the final Muvheneki logo asset when available. */}
-          <a href="#home" className="min-w-0 font-display text-2xl font-semibold leading-none text-charcoal">
-            Muvheneki
-            <span className="ml-2 hidden font-sans text-xs font-semibold uppercase tracking-[0.2em] text-clay sm:inline">
-              Briarcliff Group
+          <a href="#home" className="flex min-w-0 items-center gap-3 text-charcoal">
+            <img
+              src={muvhenekiLogo}
+              alt="Muvheneki logo"
+              className="h-11 w-11 shrink-0 rounded-full bg-ivory object-contain p-1.5 shadow-sm"
+            />
+            <span className="min-w-0">
+              <span className="block truncate font-display text-2xl font-semibold leading-none">Muvheneki</span>
+              <span className="mt-1 hidden font-sans text-xs font-semibold uppercase tracking-[0.2em] text-clay sm:block">
+                Briarcliff Group
+              </span>
             </span>
           </a>
 

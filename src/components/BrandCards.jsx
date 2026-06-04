@@ -1,50 +1,52 @@
-import { ArrowUpRight, BookOpen, Coffee, Gift, Heart, Magnet, Shirt, Sparkles } from "lucide-react";
-import bookmarkImage from "../assets/muvheneki-warm-ritual.jpg";
-import mugImage from "../assets/muvheneki-mug.jpg";
-import portraitImage from "../assets/muvheneki-portrait.jpg";
-import ritualImage from "../assets/muvheneki-ritual-close.jpg";
+import { ArrowUpRight, BookOpen, Gift, Heart, Magnet, Shirt, Sparkles } from "lucide-react";
+import chingetoDeckImage from "../assets/product-chingeto-deck.jpg";
+import comingSoonImage from "../assets/product-coming-soon.jpg";
+import ndiniDeckImage from "../assets/product-ndini-deck.jpg";
+import pricingBookmarkImage from "../assets/product-pricing-bookmark.jpg";
+import rudoDeckImage from "../assets/product-rudo-deck.jpg";
+import rukudzoDeckImage from "../assets/product-rukudzo-deck.jpg";
 import Reveal from "./Reveal";
 
 const products = [
   {
-    title: "Bookmarks",
-    description: "Small, beautiful page markers carrying daily reminders for your reading ritual.",
-    services: ["Ndinodiwa", "Ndakakosha"],
-    cta: "View Bookmarks",
-    Icon: BookOpen,
-    image: ritualImage,
-  },
-  {
-    title: "T-Shirts",
-    description: "Soft statement pieces made for affirmation you can wear close to your body.",
-    services: ["UR❤️‍🔥D", "Ndakakosha", "Ndinodiwa"],
-    cta: "Shop T-Shirts",
-    Icon: Shirt,
-    image: portraitImage,
-  },
-  {
-    title: "Affirmation Deck",
-    description: "A grounding deck for reflection, journaling, meditation, and soft morning guidance.",
-    services: ["Daily pulls", "Journal prompts", "Self-love messages"],
-    cta: "Explore Deck",
+    title: "Rukudzo Deck",
+    description: "A self-worth affirmation deck for honour, gentleness, and remembering your value.",
+    services: ["Affirmation cards", "Daily pulls", "Reflection ritual"],
+    cta: "Enquire About Rukudzo",
     Icon: Sparkles,
-    image: bookmarkImage,
+    image: rukudzoDeckImage,
   },
   {
-    title: "Mugs",
-    description: "Morning ritual mugs for tea, coffee, and the words you want to begin with.",
-    services: ["UR❤️‍🔥D", "Ndakakosha", "Ndinodiwa"],
-    cta: "View Mugs",
-    Icon: Coffee,
-    image: mugImage,
-  },
-  {
-    title: "Bumper Stickers",
-    description: "Portable reminders for movement, errands, road trips, and everyday courage.",
-    services: ["Ndakakosha", "Ndinodiwa"],
-    cta: "View Stickers",
+    title: "Chingeto Deck",
+    description: "Affirmations for emotional grounding, acceptance, and steady inner language.",
+    services: ["Ndakakosha", "Ndinodiwa", "Daily reassurance"],
+    cta: "Enquire About Chingeto",
     Icon: Heart,
-    image: ritualImage,
+    image: chingetoDeckImage,
+  },
+  {
+    title: "Ndini Deck",
+    description: "A personal affirmation deck for identity, confidence, and returning to self.",
+    services: ["I am enough", "I am valuable", "I am worthy"],
+    cta: "Enquire About Ndini",
+    Icon: BookOpen,
+    image: ndiniDeckImage,
+  },
+  {
+    title: "Rudo Deck",
+    description: "Love-led affirmations for tenderness, safety, passion, and emotional repair.",
+    services: ["You are precious", "You are safe with me", "Love ritual"],
+    cta: "Enquire About Rudo",
+    Icon: Heart,
+    image: rudoDeckImage,
+  },
+  {
+    title: "Bookmarks",
+    description: "Small affirmation pieces for books, journals, Bible study, and quiet daily reminders.",
+    services: ["Ndinodiwa", "Ndakakosha", "Bible affirmation cards"],
+    cta: "View Bookmark Options",
+    Icon: BookOpen,
+    image: pricingBookmarkImage,
   },
   {
     title: "Occasion Cards",
@@ -52,23 +54,23 @@ const products = [
     services: ["Birthday", "Mother's Day", "Father's Day", "Grief", "Wedding", "Graduation", "Farewell"],
     cta: "Browse Cards",
     Icon: Gift,
-    image: bookmarkImage,
+    image: comingSoonImage,
   },
   {
-    title: "Books",
-    description: "Reflective books and written offerings for deeper inner work and gentle returning.",
-    services: ["Ritual notes", "Affirmation writing", "Seasonal messages"],
-    cta: "Explore Books",
-    Icon: BookOpen,
-    image: portraitImage,
+    title: "Wear & Sip Range",
+    description: "Coming-soon affirmation products for the body, table, and morning rituals.",
+    services: ["T-shirts", "Mugs", "UR Loved", "Ndakakosha", "Ndinodiwa"],
+    cta: "Ask About Coming Soon",
+    Icon: Shirt,
+    image: comingSoonImage,
   },
   {
-    title: "Fridge Magnets",
-    description: "Tiny kitchen altar pieces for the everyday places where life keeps happening.",
-    services: ["UR❤️‍🔥D", "Ndakakosha", "Ndinodiwa"],
-    cta: "View Magnets",
+    title: "Stickers & Magnets",
+    description: "Portable and home-based reminders for cars, fridges, desks, and everyday spaces.",
+    services: ["Bumper stickers", "Fridge magnets", "Ndakakosha", "Ndinodiwa"],
+    cta: "Request Product Details",
     Icon: Magnet,
-    image: mugImage,
+    image: comingSoonImage,
   },
 ];
 
@@ -79,7 +81,7 @@ export default function BrandCards() {
         <Reveal className="max-w-3xl">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gold">Products</p>
           <h2 className="mt-5 font-display text-4xl font-medium leading-none sm:text-6xl">
-            Affirmation pieces for the body, the home, and the in-between moments.
+            Catalogue pieces, affirmation decks, and coming-soon product formats.
           </h2>
         </Reveal>
 
@@ -95,7 +97,7 @@ export default function BrandCards() {
                 </span>
                 <span className="text-xs uppercase tracking-[0.25em] text-ivory/40">Shop</span>
               </div>
-              <img src={image} alt="" className="mb-6 aspect-[4/3] w-full rounded-3xl object-cover opacity-90" />
+              <img src={image} alt="" className="mb-6 aspect-[4/3] w-full rounded-3xl object-cover opacity-95" />
               <h3 className="font-display text-4xl font-medium">{title}</h3>
               <p className="mt-4 min-h-28 leading-7 text-ivory/70">{description}</p>
               <ul className="mt-2 grid gap-3 text-sm text-ivory/90">
