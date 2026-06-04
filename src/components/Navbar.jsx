@@ -3,12 +3,10 @@ import { useState } from "react";
 import muvhenekiLogo from "../assets/muvheneki-logo.jpg";
 
 const links = [
-  ["Affirmation", "#affirmation"],
-  ["Products", "#brands"],
-  ["Group", "#services"],
-  ["Blog", "#projects"],
-  ["Meditations", "#about"],
-  ["Connect", "#contact"],
+  ["Home", "#home"],
+  ["Muvheneki", "#muvheneki"],
+  ["Darryl Interiors", "#darryl"],
+  ["Creative Consulting", "#creative"],
 ];
 
 export default function Navbar() {
