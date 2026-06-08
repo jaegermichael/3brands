@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
-// Replace this placeholder with final Muvheneki product/lifestyle photography.
-import heroImage from "../assets/muvheneki-ritual-close.jpg";
+// Replace this image when final Muvheneki hero photography changes.
+import heroImage from "../assets/muvheneki-intro-products.jpeg";
 
 export default function Hero() {
   return (
