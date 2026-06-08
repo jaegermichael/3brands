@@ -34,6 +34,7 @@ import darrylProjectTwo from "./assets/darryl-project-2.jpg";
 import darrylProjectThree from "./assets/darryl-project-3.jpg";
 import darrylProjectFour from "./assets/darryl-project-4.jpg";
 import muvhenekiLogo from "./assets/muvheneki-logo.jpg";
+import landingBackground from "./assets/muvheneki-ritual-close.jpg";
 import muvhenekiHero from "./assets/muvheneki-portrait.jpg";
 
 const routes = new Set(["home", "muvheneki", "darryl", "creative"]);
@@ -130,7 +131,7 @@ function LandingPage() {
   return (
     <>
       <section id="home" className="relative isolate min-h-screen overflow-hidden bg-charcoal pt-32 text-ivory">
-        <img src={muvhenekiHero} alt="" className="absolute inset-0 h-full w-full object-cover opacity-35" />
+        <img src={landingBackground} alt="" className="absolute inset-0 h-full w-full object-cover opacity-35" />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(39,35,31,0.92),rgba(39,35,31,0.72),rgba(39,35,31,0.42))]" />
         <div className="section-shell relative pb-20 pt-14">
           <div className="max-w-4xl">
