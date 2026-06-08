@@ -34,14 +34,14 @@ export default function Footer() {
         <div>
           <p className="text-sm font-semibold text-gold">Contact</p>
           <div className="mt-4 grid gap-3 text-sm text-ivory/70">
-            <span>hello@muvheneki.com</span>
-            <span>+000 000 000</span>
+            <span>info.creativeconsultingzim@gmail.com</span>
+            <span>0781839151</span>
             <span>@Muvheneki / @Darrylinteriors / @creativeconsulting.inc</span>
           </div>
         </div>
       </div>
       <div className="section-shell pt-6 text-sm text-ivory/50">
-        <p>Muvheneki catalogue available as a site download. Final email and contact number can be swapped in when ready.</p>
+        <p>Muvheneki catalogue available as a site download. Contact details can be updated whenever the group details change.</p>
       </div>
     </footer>
   );

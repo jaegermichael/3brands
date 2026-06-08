@@ -34,7 +34,7 @@ import darrylProjectTwo from "./assets/darryl-project-2.jpg";
 import darrylProjectThree from "./assets/darryl-project-3.jpg";
 import darrylProjectFour from "./assets/darryl-project-4.jpg";
 import muvhenekiLogo from "./assets/muvheneki-logo.jpg";
-import muvhenekiHero from "./assets/muvheneki-ritual-close.jpg";
+import muvhenekiHero from "./assets/muvheneki-intro-products.jpeg";
 
 const routes = new Set(["home", "muvheneki", "darryl", "creative"]);
 const sectionRoutes = {

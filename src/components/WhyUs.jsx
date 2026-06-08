@@ -6,8 +6,8 @@ const reasons = [
   { title: "Monthly message", detail: "Seasonal words and ritual notes", Icon: Quote },
   { title: "Instagram", detail: "@Muvheneki / @Darrylinteriors / @creativeconsulting.inc", Icon: Send },
   { title: "Twitter", detail: "Add the final handle here", Icon: MessageCircle },
-  { title: "Email address", detail: "hello@muvheneki.com placeholder", Icon: Mail },
-  { title: "Contact number", detail: "+000 000 000 placeholder", Icon: Phone },
+  { title: "Email address", detail: "info.creativeconsultingzim@gmail.com", Icon: Mail },
+  { title: "Contact number", detail: "0781839151", Icon: Phone },
   { title: "Testimonials", detail: "Space for client love and reflections", Icon: Quote },
 ];
 

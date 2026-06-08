@@ -38,7 +38,7 @@ export default function ContactForm() {
             </label>
             <label className="grid gap-2 text-sm font-semibold text-charcoal/80">
               Phone Number
-              <input className="input-shell" name="phone" type="tel" placeholder="+263..." />
+              <input className="input-shell" name="phone" type="tel" placeholder="0781839151" />
             </label>
             <label className="grid gap-2 text-sm font-semibold text-charcoal/80">
               What are you interested in?
