@@ -1,11 +1,11 @@
 import Reveal from "./Reveal";
 
 import consultingLogo from "../assets/creative-consulting-logo.jpg";
+import consultingFeature from "../assets/creative-consulting-red-car.jpg";
+import darrylFeature from "../assets/darryl-interiors-feature.jpg";
 import darrylLogo from "../assets/darryl-interiors-logo.jpg";
+import muvhenekiFeature from "../assets/muvheneki-intro-products.jpeg";
 import muvhenekiLogo from "../assets/muvheneki-logo.jpg";
-import darrylPortrait from "../assets/darryl-portrait.jpg";
-import consultingImage from "../assets/darryl-city-portrait.jpg";
-import muvhenekiImage from "../assets/muvheneki-portrait.jpg";
 
 const services = [
   {
@@ -14,7 +14,7 @@ const services = [
       "Dedicated to the art of spatial alchemy, transforming interior and exterior environments into spaces of beauty, purpose, and connection.",
     items: ["Organic natural design", "Interior and exterior spaces", "Refinement and craftsmanship", "Previous projects", "Book a consult"],
     logo: darrylLogo,
-    image: darrylPortrait,
+    image: darrylFeature,
   },
   {
     title: "Muvheneki",
@@ -22,7 +22,7 @@ const services = [
       "A sanctuary of words that heal, offering poetry, soul sessions, affirmations, and meditations for self-love, renewal, and rebirth.",
     items: ["Daily divinations", "Monthly message", "Soul sessions", "Affirmations", "Meditations"],
     logo: muvhenekiLogo,
-    image: muvhenekiImage,
+    image: muvhenekiFeature,
   },
   {
     title: "Creative Consulting Inc.",
@@ -30,7 +30,7 @@ const services = [
       "Working at the intersection of strategy, creativity, and execution across music, aviation, lifestyle, banking, and more.",
     items: ["Marketing strategy", "Project management", "Concept to completion", "Previous partners", "Book a consult"],
     logo: consultingLogo,
-    image: consultingImage,
+    image: consultingFeature,
   },
 ];
 
@@ -56,7 +56,10 @@ export default function Services() {
                 <span className="font-display text-5xl text-gold/70">0{index + 1}</span>
                 <img src={logo} alt={`${title} logo`} className="h-16 w-16 rounded-full bg-ivory object-contain p-2" />
               </div>
-              <img src={image} alt="" className="mt-6 aspect-[4/3] w-full rounded-3xl object-cover" />
+              <div className="relative mt-6 aspect-[4/3] w-full overflow-hidden rounded-3xl">
+                <img src={image} alt="" className="h-full w-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/40 to-transparent" />
+              </div>
               <h3 className="mt-6 font-display text-3xl font-medium leading-none">{title}</h3>
               <p className="mt-4 min-h-20 leading-7 text-charcoal/70">{description}</p>
               <ul className="mt-7 grid gap-3 border-t border-taupe/20 pt-6 text-sm font-medium text-charcoal/80">

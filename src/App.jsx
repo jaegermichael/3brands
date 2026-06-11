@@ -26,16 +26,16 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import consultingLogo from "./assets/creative-consulting-logo.jpg";
-import consultingPortrait from "./assets/darryl-city-portrait.jpg";
 import darrylLogo from "./assets/darryl-interiors-logo.jpg";
-import darrylPortrait from "./assets/darryl-portrait.jpg";
 import darrylProjectOne from "./assets/darryl-project-1.jpg";
 import darrylProjectTwo from "./assets/darryl-project-2.jpg";
 import darrylProjectThree from "./assets/darryl-project-3.jpg";
 import darrylProjectFour from "./assets/darryl-project-4.jpg";
+import darrylFeature from "./assets/darryl-interiors-feature.jpg";
+import consultingFeature from "./assets/creative-consulting-red-car.jpg";
 import muvhenekiLogo from "./assets/muvheneki-logo.jpg";
 import landingBackground from "./assets/muvheneki-ritual-close.jpg";
-import muvhenekiHero from "./assets/muvheneki-portrait.jpg";
+import muvhenekiFeature from "./assets/muvheneki-intro-products.jpeg";
 
 const routes = new Set(["home", "muvheneki", "darryl", "creative"]);
 const sectionRoutes = {
@@ -100,7 +100,7 @@ function LandingPage() {
       title: "Muvheneki",
       href: "#muvheneki",
       logo: muvhenekiLogo,
-      image: muvhenekiHero,
+      image: muvhenekiFeature,
       eyebrow: "Words that heal",
       description:
         "Poetry, soul sessions, affirmations, meditations, and products that guide people back to self-love, renewal, and inner light.",
@@ -110,7 +110,7 @@ function LandingPage() {
       title: "Darryl Interiors",
       href: "#darryl",
       logo: darrylLogo,
-      image: darrylPortrait,
+      image: darrylFeature,
       eyebrow: "Spatial alchemy",
       description:
         "Organic, natural interior and exterior environments shaped through warmth, refinement, craftsmanship, and timeless living.",
@@ -120,7 +120,7 @@ function LandingPage() {
       title: "Creative Consulting Inc.",
       href: "#creative",
       logo: consultingLogo,
-      image: consultingPortrait,
+      image: consultingFeature,
       eyebrow: "Strategy to execution",
       description:
         "Creative strategy, marketing, project management, and purposeful growth across music, aviation, lifestyle, banking, and more.",
@@ -153,7 +153,7 @@ function LandingPage() {
                 className="group overflow-hidden rounded-[2rem] border border-ivory/15 bg-ivory/[0.08] shadow-glow transition duration-500 hover:-translate-y-2 hover:border-gold/70 hover:bg-ivory/[0.12]"
               >
                 <div className="relative h-72 overflow-hidden">
-                  <img src={image} alt="" className="h-full w-full object-cover opacity-82 transition duration-700 group-hover:scale-105" />
+                  <img src={image} alt="" className="h-full w-full object-cover opacity-88 transition duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/20 to-transparent" />
                   <img
                     src={logo}
@@ -183,6 +183,20 @@ function LandingPage() {
       <Portfolio />
       <CTA />
     </>
+  );
+}
+
+function BrandImageShowcase({ image, logo, title }) {
+  return (
+    <div className="relative isolate aspect-[4/5] w-full overflow-hidden rounded-[2rem] shadow-glow">
+      <img src={image} alt="" className="h-full w-full object-cover" />
+      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/72 via-charcoal/12 to-transparent" />
+      <img
+        src={logo}
+        alt={`${title} logo`}
+        className="absolute left-6 top-6 h-20 w-20 rounded-full bg-ivory object-contain p-2 shadow-soft"
+      />
+    </div>
   );
 }
 
@@ -310,7 +324,7 @@ function DarrylPage() {
             </p>
             <a href="#darryl-contact" className="button-primary mt-8">Book a consult</a>
           </div>
-          <img src={darrylPortrait} alt="Darryl Interiors portrait" className="aspect-[4/5] w-full rounded-[2rem] object-cover shadow-glow" />
+          <BrandImageShowcase image={darrylFeature} logo={darrylLogo} title="Darryl Interiors" />
         </div>
 
         <div className="mt-16 grid gap-10 lg:grid-cols-[0.75fr_1.25fr]">
@@ -412,7 +426,7 @@ function CreativePage() {
             </p>
             <a href="#creative-contact" className="button-primary mt-8">Book a consult</a>
           </div>
-          <img src={consultingPortrait} alt="Creative Consulting portrait" className="aspect-[4/5] w-full rounded-[2rem] object-cover shadow-glow" />
+          <BrandImageShowcase image={consultingFeature} logo={consultingLogo} title="Creative Consulting Inc." />
         </div>
 
         <div className="mt-16 grid gap-10 lg:grid-cols-[0.75fr_1.25fr]">
