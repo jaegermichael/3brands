@@ -6,8 +6,6 @@ import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Intro from "./components/Intro";
 import Navbar from "./components/Navbar";
-import Portfolio from "./components/Portfolio";
-import Services from "./components/Services";
 import WhyUs from "./components/WhyUs";
 import {
   ArrowRight,
@@ -89,7 +87,7 @@ export default function App() {
         {route === "darryl" && <DarrylPage />}
         {route === "creative" && <CreativePage />}
       </main>
-      <Footer />
+      {route !== "home" && <Footer />}
     </div>
   );
 }
@@ -134,14 +132,16 @@ function LandingPage() {
         <img src={landingBackground} alt="" className="absolute inset-0 h-full w-full object-cover opacity-35" />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(39,35,31,0.92),rgba(39,35,31,0.72),rgba(39,35,31,0.42))]" />
         <div className="section-shell relative pb-20 pt-14">
-          <div className="max-w-4xl">
+          <div className="max-w-5xl">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gold">The Briarcliff Group</p>
-            <h1 className="mt-6 font-display text-5xl font-medium leading-[0.92] sm:text-7xl lg:text-[6.8rem]">
-              One creative house. Three distinct worlds.
+            <h1 className="mt-6 font-display text-6xl font-medium leading-[0.88] sm:text-8xl lg:text-[8rem]">
+              The Briarcliff Group.
             </h1>
-            <p className="mt-7 max-w-2xl text-base leading-8 text-ivory/78 sm:text-lg">
-              A landing space for Muvheneki, Darryl Interiors, and Creative Consulting Inc. Choose the
-              brand you want to enter to see its full story, services, projects, products, and contact path.
+            <p className="mt-7 max-w-2xl font-display text-3xl leading-tight text-gold sm:text-5xl">
+              One creative house. Three distinct worlds.
+            </p>
+            <p className="mt-6 max-w-2xl text-base leading-8 text-ivory/78 sm:text-lg">
+              Choose a logo below to enter the full world of each brand.
             </p>
           </div>
 
@@ -158,7 +158,7 @@ function LandingPage() {
                   <img
                     src={logo}
                     alt={`${title} logo`}
-                    className="absolute left-6 top-6 h-16 w-16 rounded-full bg-ivory object-contain p-2 shadow-soft"
+                    className="absolute left-1/2 top-1/2 h-28 w-28 -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-[0_18px_34px_rgba(0,0,0,0.45)] transition duration-700 group-hover:scale-110 sm:h-36 sm:w-36"
                   />
                 </div>
                 <div className="p-6 sm:p-8">
@@ -166,10 +166,9 @@ function LandingPage() {
                     <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">{eyebrow}</p>
                     <Icon size={22} strokeWidth={1.4} className="text-gold" />
                   </div>
-                  <h2 className="mt-4 font-display text-4xl font-medium leading-none">{title}</h2>
                   <p className="mt-4 leading-7 text-ivory/70">{description}</p>
                   <span className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-gold">
-                    Visit {title}
+                    Enter brand world
                     <ArrowRight size={17} />
                   </span>
                 </div>
@@ -179,9 +178,6 @@ function LandingPage() {
         </div>
       </section>
 
-      <Services />
-      <Portfolio />
-      <CTA />
     </>
   );
 }
