@@ -13,44 +13,56 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const brandLinks = links.filter((link) => link.logo);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5">
-      <nav className="mx-auto max-w-7xl rounded-[1.75rem] border border-ivory/55 bg-ivory/75 shadow-[0_16px_48px_rgba(39,35,31,0.12)] backdrop-blur-xl">
-        <div className="flex min-h-[5rem] items-center justify-between gap-5 px-5 sm:px-7">
-          <a href="#home" className="flex min-w-0 items-center gap-3 text-charcoal">
-            <span className="flex shrink-0 -space-x-3">
-              {[muvhenekiLogo, darrylLogo, consultingLogo].map((logo, index) => (
-                <img
-                  key={logo}
-                  src={logo}
-                  alt=""
-                  className="h-12 w-12 object-contain drop-shadow-[0_8px_16px_rgba(39,35,31,0.2)]"
-                  style={{ zIndex: 3 - index }}
-                />
-              ))}
-            </span>
+    <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6">
+      <nav className="mx-auto max-w-7xl rounded-[1.35rem] border border-ivory/35 bg-ivory/82 shadow-[0_18px_55px_rgba(24,21,18,0.16)] backdrop-blur-2xl">
+        <div className="flex min-h-[4.75rem] items-center justify-between gap-5 px-5 sm:px-7">
+          <a href="#home" className="flex min-w-0 items-center gap-4 text-charcoal">
+            <span className="hidden h-10 w-px bg-clay/35 sm:block" />
             <span className="min-w-0">
-              <span className="block truncate font-display text-3xl font-semibold leading-none sm:text-4xl">The Briarcliff Group</span>
-              <span className="mt-1 hidden font-sans text-xs font-semibold uppercase tracking-[0.2em] text-clay sm:block">
+              <span className="block truncate font-display text-[2rem] font-semibold leading-none tracking-normal sm:text-[2.65rem]">
+                The Briarcliff Group
+              </span>
+              <span className="mt-1.5 hidden font-sans text-[0.68rem] font-semibold uppercase tracking-[0.32em] text-clay sm:block">
                 Interiors / Words / Strategy
               </span>
             </span>
           </a>
 
-          <div className="hidden items-center gap-6 lg:flex">
-            {links.map(({ label, href, logo }) => (
+          <div className="hidden items-center gap-4 lg:flex">
+            <a
+              href="#home"
+              className="px-2 text-sm font-medium text-charcoal/62 transition hover:text-charcoal"
+            >
+              Home
+            </a>
+            <div className="flex items-center gap-2 rounded-full border border-taupe/20 bg-ivory/55 px-2.5 py-2 shadow-[inset_0_1px_0_rgba(255,255,255,0.55)]">
+              {brandLinks.map(({ label, href, logo }) => (
+                <a
+                  key={label}
+                  href={href}
+                  aria-label={label}
+                  title={label}
+                  className="grid h-12 w-12 place-items-center rounded-full transition duration-300 hover:bg-linen/80 hover:shadow-soft"
+                >
+                  <img src={logo} alt="" className="h-10 w-10 object-contain transition duration-300 hover:scale-105" />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div className="hidden items-center gap-2 md:flex lg:hidden">
+            {brandLinks.map(({ label, href, logo }) => (
               <a
                 key={label}
                 href={href}
                 aria-label={label}
-                className="relative text-sm font-medium text-charcoal/70 transition hover:text-charcoal after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:bg-gold after:transition-all hover:after:w-full"
+                title={label}
+                className="grid h-11 w-11 place-items-center rounded-full transition hover:bg-linen/70"
               >
-                {logo ? (
-                  <img src={logo} alt="" className="h-11 w-11 object-contain transition duration-300 hover:scale-110" />
-                ) : (
-                  label
-                )}
+                <img src={logo} alt="" className="h-9 w-9 object-contain" />
               </a>
             ))}
           </div>
