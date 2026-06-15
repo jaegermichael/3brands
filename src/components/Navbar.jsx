@@ -18,11 +18,10 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6">
       <nav className="mx-auto max-w-7xl rounded-[1.35rem] border border-ivory/35 bg-ivory/82 shadow-[0_18px_55px_rgba(24,21,18,0.16)] backdrop-blur-2xl">
-        <div className="flex min-h-[4.75rem] items-center justify-between gap-5 px-5 sm:px-7">
-          <a href="#home" className="flex min-w-0 items-center gap-4 text-charcoal">
-            <span className="hidden h-10 w-px bg-clay/35 sm:block" />
-            <span className="min-w-0">
-              <span className="block truncate font-display text-[2rem] font-semibold leading-none tracking-normal sm:text-[2.65rem]">
+        <div className="flex min-h-[4.75rem] items-center justify-between gap-4 px-5 sm:px-7">
+          <a href="#home" className="flex min-w-max items-center text-charcoal">
+            <span>
+              <span className="block whitespace-nowrap font-display text-[1.7rem] font-semibold leading-none tracking-normal sm:text-[2.35rem] lg:text-[2.65rem]">
                 The Briarcliff Group
               </span>
               <span className="mt-1.5 hidden font-sans text-[0.68rem] font-semibold uppercase tracking-[0.32em] text-clay sm:block">
