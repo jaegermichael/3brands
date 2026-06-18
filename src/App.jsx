@@ -23,15 +23,15 @@ import {
   Sparkles,
 } from "lucide-react";
 import { useEffect, useState } from "react";
-import consultingLogo from "./assets/creative-consulting-logo.jpg";
-import darrylLogo from "./assets/darryl-interiors-logo.jpg";
+import consultingLogo from "./assets/creative-consulting-icon.png";
+import darrylLogo from "./assets/darryl-interiors-icon.png";
 import darrylProjectOne from "./assets/darryl-project-1.jpg";
 import darrylProjectTwo from "./assets/darryl-project-2.jpg";
 import darrylProjectThree from "./assets/darryl-project-3.jpg";
 import darrylProjectFour from "./assets/darryl-project-4.jpg";
 import darrylFeature from "./assets/darryl-interiors-feature.jpg";
 import consultingFeature from "./assets/creative-consulting-red-car.jpg";
-import muvhenekiLogo from "./assets/muvheneki-logo.jpg";
+import muvhenekiLogo from "./assets/muvheneki-icon.png";
 import landingBackground from "./assets/muvheneki-ritual-close.jpg";
 import muvhenekiFeature from "./assets/muvheneki-intro-products.jpeg";
 
@@ -158,7 +158,7 @@ function LandingPage() {
                   <img
                     src={logo}
                     alt={`${title} logo`}
-                    className="absolute left-1/2 top-1/2 h-28 w-28 -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-[0_18px_34px_rgba(0,0,0,0.45)] transition duration-700 group-hover:scale-110 sm:h-36 sm:w-36"
+                    className="absolute left-6 top-6 h-16 w-16 rounded-full object-contain p-1.5 drop-shadow-[0_12px_24px_rgba(0,0,0,0.42)] transition duration-700 group-hover:scale-110 sm:h-20 sm:w-20"
                   />
                 </div>
                 <div className="p-6 sm:p-8">
@@ -190,7 +190,7 @@ function BrandImageShowcase({ image, logo, title }) {
       <img
         src={logo}
         alt={`${title} logo`}
-        className="absolute left-6 top-6 h-20 w-20 rounded-full bg-ivory object-contain p-2 shadow-soft"
+        className="absolute left-6 top-6 h-20 w-20 rounded-full object-contain p-1.5 drop-shadow-[0_12px_24px_rgba(0,0,0,0.42)]"
       />
     </div>
   );
