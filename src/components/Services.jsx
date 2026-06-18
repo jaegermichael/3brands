@@ -1,11 +1,11 @@
 import Reveal from "./Reveal";
 
-import consultingLogo from "../assets/creative-consulting-logo.jpg";
+import consultingLogo from "../assets/creative-consulting-icon.png";
 import consultingFeature from "../assets/creative-consulting-red-car.jpg";
 import darrylFeature from "../assets/darryl-interiors-feature.jpg";
-import darrylLogo from "../assets/darryl-interiors-logo.jpg";
+import darrylLogo from "../assets/darryl-interiors-icon.png";
 import muvhenekiFeature from "../assets/muvheneki-intro-products.jpeg";
-import muvhenekiLogo from "../assets/muvheneki-logo.jpg";
+import muvhenekiLogo from "../assets/muvheneki-icon.png";
 
 const services = [
   {
@@ -54,7 +54,7 @@ export default function Services() {
             <Reveal key={title} className="rounded-[1.75rem] border border-taupe/20 bg-ivory/70 p-6 shadow-soft sm:p-8">
               <div className="flex items-center justify-between gap-4">
                 <span className="font-display text-5xl text-gold/70">0{index + 1}</span>
-                <img src={logo} alt={`${title} logo`} className="h-16 w-16 rounded-full bg-ivory object-contain p-2" />
+                <img src={logo} alt={`${title} logo`} className="h-16 w-16 object-contain drop-shadow-sm" />
               </div>
               <div className="relative mt-6 aspect-[4/3] w-full overflow-hidden rounded-3xl">
                 <img src={image} alt="" className="h-full w-full object-cover" />
