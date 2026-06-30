@@ -15,9 +15,6 @@ export default function Hero() {
 
       <div className="section-shell relative flex min-h-[min(94svh,62rem)] items-center pb-24 pt-40 sm:pb-32">
         <div className="max-w-3xl animate-[fade-in_900ms_ease_both]">
-          <p className="mb-6 inline-flex rounded-full border border-ivory/25 bg-ivory/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-ivory backdrop-blur">
-            The Briarcliff Group / Words that heal
-          </p>
           <h1 className="font-display text-5xl font-medium leading-[0.92] text-ivory sm:text-7xl lg:text-[6.7rem]">
             Muvheneki.
           </h1>
@@ -33,9 +30,6 @@ export default function Hero() {
             <a href="#brands" className="button-primary bg-ivory text-charcoal hover:bg-linen">
               Shop Products
               <ArrowRight size={17} />
-            </a>
-            <a href="#contact" className="button-secondary">
-              Book a Soul Session
             </a>
           </div>
         </div>

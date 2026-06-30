@@ -1,4 +1,4 @@
-import { Menu, X } from "lucide-react";
+import { Menu, ShoppingCart, X } from "lucide-react";
 import { useState } from "react";
 import consultingLogo from "../assets/creative-consulting-icon.png";
 import darrylLogo from "../assets/darryl-interiors-icon.png";
@@ -11,7 +11,7 @@ const links = [
   { label: "Creative Consulting", href: "#creative", logo: consultingLogo },
 ];
 
-export default function Navbar() {
+export default function Navbar({ cartCount = 0 }) {
   const [open, setOpen] = useState(false);
   const brandLinks = links.filter((link) => link.logo);
 
@@ -19,53 +19,43 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6">
       <nav className="mx-auto max-w-7xl rounded-[1.35rem] border border-ivory/70 bg-ivory/95 shadow-[0_18px_55px_rgba(24,21,18,0.18)] backdrop-blur-2xl">
         <div className="flex min-h-[4.75rem] items-center justify-between gap-4 px-5 sm:px-7">
-          <a href="#home" className="flex min-w-max items-center text-[#17130f]">
-            <span>
-              <span className="block whitespace-nowrap font-display text-[1.7rem] font-semibold leading-none tracking-normal sm:text-[2.35rem] lg:text-[2.65rem]">
-                The Briarcliff Group
-              </span>
-              <span className="mt-1.5 hidden font-sans text-[0.68rem] font-bold uppercase tracking-[0.32em] text-[#7b5137] sm:block">
-                Interiors / Words / Strategy
-              </span>
-            </span>
-          </a>
-
-          <div className="hidden items-center gap-4 lg:flex">
-            <a
-              href="#home"
-              className="px-2 text-sm font-semibold text-charcoal/78 transition hover:text-charcoal"
-            >
-              Home
-            </a>
-            <div className="flex items-center gap-2 rounded-full border border-taupe/20 bg-linen/55 px-2.5 py-2 shadow-[inset_0_1px_0_rgba(255,255,255,0.65)]">
-              {brandLinks.map(({ label, href, logo }) => (
-                <a
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  title={label}
-                  className="grid h-12 w-12 place-items-center rounded-full transition duration-300 hover:bg-ivory/80 hover:shadow-soft"
-                >
-                  <img src={logo} alt="" className="h-10 w-10 object-contain transition duration-300 hover:scale-105" />
-                </a>
-              ))}
-            </div>
-          </div>
-
-          <div className="hidden items-center gap-2 md:flex lg:hidden">
+          {/* Left — three brand logos */}
+          <div className="flex items-center gap-2 rounded-full border border-taupe/20 bg-linen/55 px-2.5 py-2 shadow-[inset_0_1px_0_rgba(255,255,255,0.65)]">
             {brandLinks.map(({ label, href, logo }) => (
               <a
                 key={label}
                 href={href}
                 aria-label={label}
                 title={label}
-                className="grid h-11 w-11 place-items-center rounded-full transition hover:bg-linen/70"
+                className="grid h-12 w-12 place-items-center rounded-full transition duration-300 hover:bg-ivory/80 hover:shadow-soft"
               >
-                <img src={logo} alt="" className="h-9 w-9 object-contain" />
+                <img src={logo} alt="" className="h-10 w-10 object-contain transition duration-300 hover:scale-105" />
               </a>
             ))}
           </div>
 
+          {/* Right — brand name + cart */}
+          <div className="flex items-center gap-4">
+            {cartCount > 0 && (
+              <a
+                href="#muvheneki"
+                className="relative grid h-10 w-10 place-items-center rounded-full border border-taupe/20 bg-linen/55 text-charcoal transition hover:bg-ivory"
+                aria-label="Shopping basket"
+              >
+                <ShoppingCart size={18} />
+                <span className="absolute -right-1.5 -top-1.5 grid h-5 w-5 place-items-center rounded-full bg-red-600 text-[10px] font-bold text-white">
+                  {cartCount}
+                </span>
+              </a>
+            )}
+            <a href="#home" className="flex min-w-max items-center text-[#17130f]">
+              <span className="whitespace-nowrap font-display text-[1.95rem] font-semibold leading-none tracking-normal sm:text-[2.6rem] lg:text-[3rem]">
+                The Briarcliff Group
+              </span>
+            </a>
+          </div>
+
+          {/* Mobile menu toggle */}
           <button
             type="button"
             aria-label={open ? "Close navigation" : "Open navigation"}
