@@ -106,13 +106,40 @@ body {
   }
 }
 
+.partner-marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+.partner-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 1rem;
+  animation: partner-marquee 28s linear infinite;
+}
+
+.partner-marquee:hover .partner-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes partner-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 
   .reveal,
-  .hero-image {
+  .hero-image,
+  .partner-marquee-track {
     animation: none;
     opacity: 1;
     transform: none;

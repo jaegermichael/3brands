@@ -8,7 +8,7 @@ const links = [
   { label: "Home", href: "#home" },
   { label: "Muvheneki", href: "#muvheneki", logo: muvhenekiLogo },
   { label: "Darryl Interiors", href: "#darryl", logo: darrylLogo },
-  { label: "Creative Consulting", href: "#creative", logo: consultingLogo },
+  { label: "Creative Consulting (CCI)", href: "#creative", logo: consultingLogo },
 ];
 
 export default function Navbar({ cartCount = 0 }) {
@@ -19,7 +19,6 @@ export default function Navbar({ cartCount = 0 }) {
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6">
       <nav className="mx-auto max-w-7xl rounded-[1.35rem] border border-ivory/70 bg-ivory/95 shadow-[0_18px_55px_rgba(24,21,18,0.18)] backdrop-blur-2xl">
         <div className="flex min-h-[4.75rem] items-center justify-between gap-4 px-5 sm:px-7">
-          {/* Left — three brand logos */}
           <div className="flex items-center gap-2 rounded-full border border-taupe/20 bg-linen/55 px-2.5 py-2 shadow-[inset_0_1px_0_rgba(255,255,255,0.65)]">
             {brandLinks.map(({ label, href, logo }) => (
               <a
@@ -34,7 +33,6 @@ export default function Navbar({ cartCount = 0 }) {
             ))}
           </div>
 
-          {/* Right — brand name + cart */}
           <div className="flex items-center gap-4">
             {cartCount > 0 && (
               <a
@@ -49,13 +47,12 @@ export default function Navbar({ cartCount = 0 }) {
               </a>
             )}
             <a href="#home" className="flex min-w-max items-center text-[#17130f]">
-              <span className="whitespace-nowrap font-display text-[1.95rem] font-semibold leading-none tracking-normal sm:text-[2.6rem] lg:text-[3rem]">
+              <span className="whitespace-nowrap font-display text-[1.55rem] font-semibold leading-none tracking-normal sm:text-[2.2rem] lg:text-[2.7rem]">
                 The Briarcliff Group
               </span>
             </a>
           </div>
 
-          {/* Mobile menu toggle */}
           <button
             type="button"
             aria-label={open ? "Close navigation" : "Open navigation"}

@@ -2,7 +2,7 @@ const quickLinks = [
   ["Home", "#home"],
   ["Muvheneki", "#muvheneki"],
   ["Darryl Interiors", "#darryl"],
-  ["Creative Consulting", "#creative"],
+  ["Creative Consulting (CCI)", "#creative"],
 ];
 
 export default function Footer({ route = "home" }) {
@@ -17,14 +17,22 @@ export default function Footer({ route = "home" }) {
     darryl: {
       name: "Darryl Interiors",
       subtitle: "Interiors.",
-      socials: [{ label: "Darryl Interiors", handle: "@Darrylinteriors", href: "https://www.instagram.com/Darrylinteriors" }],
-      emails: ["info@daryllinteriors.co.zw"],
+      socials: [
+        { label: "Darryl Interiors", handle: "@Darrylinteriors", href: "https://www.instagram.com/Darrylinteriors" },
+      ],
+      emails: ["info@darrylinteriors.co.zw"],
       phone: null,
     },
     creative: {
-      name: "Creative Consulting Inc.",
+      name: "Creative Consulting (CCI)",
       subtitle: "Creative strategy.",
-      socials: [{ label: "Creative Consulting", handle: "@creativeconsulting.inc", href: "https://www.instagram.com/creativeconsulting.inc" }],
+      socials: [
+        {
+          label: "Creative Consulting (CCI)",
+          handle: "@creativeconsulting.inc",
+          href: "https://www.instagram.com/creativeconsulting.inc",
+        },
+      ],
       emails: ["info@creativeconsulting.co.zw"],
       phone: null,
     },
@@ -34,9 +42,13 @@ export default function Footer({ route = "home" }) {
       socials: [
         { label: "Muvheneki", handle: "@Muvheneki", href: "https://www.instagram.com/Muvheneki" },
         { label: "Darryl Interiors", handle: "@Darrylinteriors", href: "https://www.instagram.com/Darrylinteriors" },
-        { label: "Creative Consulting", handle: "@creativeconsulting.inc", href: "https://www.instagram.com/creativeconsulting.inc" },
+        {
+          label: "Creative Consulting (CCI)",
+          handle: "@creativeconsulting.inc",
+          href: "https://www.instagram.com/creativeconsulting.inc",
+        },
       ],
-      emails: ["hello@muvheneki.co.zw", "info@daryllinteriors.co.zw", "info@creativeconsulting.co.zw"],
+      emails: ["hello@muvheneki.co.zw", "info@darrylinteriors.co.zw", "info@creativeconsulting.co.zw"],
       phone: "+263 78 183 9151",
     },
   };
@@ -48,9 +60,7 @@ export default function Footer({ route = "home" }) {
       <div className="section-shell grid gap-10 border-b border-ivory/12 pb-10 md:grid-cols-2 lg:grid-cols-[1.2fr_0.7fr_0.7fr_0.9fr]">
         <div>
           <p className="font-display text-4xl font-medium">{data.name}</p>
-          <p className="mt-4 text-sm uppercase tracking-[0.25em] text-gold">
-            {data.subtitle}
-          </p>
+          <p className="mt-4 text-sm uppercase tracking-[0.25em] text-gold">{data.subtitle}</p>
         </div>
         <div>
           <p className="text-sm font-semibold text-gold">Quick links</p>
@@ -66,13 +76,7 @@ export default function Footer({ route = "home" }) {
           <p className="text-sm font-semibold text-gold">Social</p>
           <div className="mt-4 grid gap-3 text-sm text-ivory/70">
             {data.socials.map((s) => (
-              <a
-                key={s.handle}
-                href={s.href}
-                target="_blank"
-                rel="noreferrer"
-                className="transition hover:text-gold"
-              >
+              <a key={s.handle} href={s.href} target="_blank" rel="noreferrer" className="transition hover:text-gold">
                 {s.handle}
               </a>
             ))}
@@ -82,14 +86,16 @@ export default function Footer({ route = "home" }) {
           <p className="text-sm font-semibold text-gold">Contact</p>
           <div className="mt-4 grid gap-3 text-sm text-ivory/70">
             {data.emails.map((email) => (
-              <span key={email}>{email}</span>
+              <a key={email} href={`mailto:${email}`} className="transition hover:text-gold">
+                {email}
+              </a>
             ))}
             {data.phone && <span>{data.phone}</span>}
           </div>
         </div>
       </div>
       <div className="section-shell pt-6 text-sm text-ivory/50">
-        <p>Contact details can be updated whenever the brand details change.</p>
+        <p>© The Briarcliff Group · Darryl Interiors · Muvheneki · Creative Consulting (CCI)</p>
       </div>
     </footer>
   );
